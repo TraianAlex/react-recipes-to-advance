@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab65e4a9-e90f-46d1-b7e9-73cc0ee9a164" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1Wwo6PFifYffI9YWZkNiPVTIRDs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab65e4a9-e90f-46d1-b7e9-73cc0ee9a164" name="Default Changelist" comment="" />
+      <created>1580069842035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580069842035</updated>
+      <workItem from="1580069843341" duration="3742000" />
+      <workItem from="1580141358278" duration="434000" />
+      <workItem from="1580162852239" duration="787000" />
+      <workItem from="1580163814322" duration="9800000" />
+      <workItem from="1580480582398" duration="599000" />
+      <workItem from="1580838402374" duration="314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="639" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1580838402780">
+      <screen x="0" y="23" width="1920" height="971" />
+    </state>
+    <state x="639" y="339" key="com.intellij.ide.util.TipDialog/1920.80.1920.1057/0.23.1920.967@0.23.1920.967" timestamp="1580141358735" />
+    <state x="639" y="340" key="com.intellij.ide.util.TipDialog/1920.80.1920.1057/0.23.1920.971@0.23.1920.971" timestamp="1580838402780" />
+  </component>
+</project>
