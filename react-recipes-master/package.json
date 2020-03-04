@@ -28,7 +28,7 @@
     "basscss-colors": "^2.2.0",
     "css-loader": "^0.28.7",
     "dotenv": "^4.0.0",
-    "eslint": "^4.10.0",
+    "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-import": "^2.8.0",
