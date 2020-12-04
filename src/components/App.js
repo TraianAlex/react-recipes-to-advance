@@ -1,15 +1,15 @@
 // /* eslint-disable react/no-unused-state */
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Home from "./Home";
-import Favorites from "./Favorites";
-import Recipe from "./Recipe";
-import NotFound from "./NotFound";
-import Header from "../components/Header";
-import { loadRecipes } from "../actions/recipes";
-import RootModal from "./RootModal";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import Home from './Home';
+import Favorites from './Favorites';
+import Recipe from './Recipe';
+import NotFound from './NotFound';
+import Header from '../components/Header';
+import { loadRecipes } from '../actions/recipes';
+import RootModal from './RootModal';
 
 class App extends React.Component {
   componentDidMount() {
@@ -36,7 +36,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  loadRecipes: PropTypes.func.isRequired
+  loadRecipes: PropTypes.func.isRequired,
 };
 
 export default connect(null, { loadRecipes })(App);

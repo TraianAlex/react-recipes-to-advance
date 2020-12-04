@@ -1,9 +1,9 @@
 // @ts-nocheck
 export const actionTypes = {
-  LOAD_RECIPES_SUCCESS: "LOAD_RECIPES_SUCCESS",
-  LOAD_RECIPES_FAILURE: "LOAD_RECIPES_FAILURE",
-  LOAD_RECIPE_SUCCESS: "LOAD_RECIPE_SUCCESS",
-  LOAD_RECIPE_FAILURE: "LOAD_RECIPE_FAILURE"
+  LOAD_RECIPES_SUCCESS: 'LOAD_RECIPES_SUCCESS',
+  LOAD_RECIPES_FAILURE: 'LOAD_RECIPES_FAILURE',
+  LOAD_RECIPE_SUCCESS: 'LOAD_RECIPE_SUCCESS',
+  LOAD_RECIPE_FAILURE: 'LOAD_RECIPE_FAILURE',
 };
 
 export const loadRecipes = () => dispatch =>
@@ -12,14 +12,14 @@ export const loadRecipes = () => dispatch =>
     .then(recipes =>
       dispatch({
         type: actionTypes.LOAD_RECIPES_SUCCESS,
-        recipes
-      })
+        recipes,
+      }),
     )
     .catch(error =>
       dispatch({
         type: actionTypes.LOAD_RECIPES_FAILURE,
-        error
-      })
+        error,
+      }),
     );
 
 export const loadRecipe = id => dispatch =>
@@ -28,18 +28,18 @@ export const loadRecipe = id => dispatch =>
     .then(recipe =>
       dispatch({
         type: actionTypes.LOAD_RECIPE_SUCCESS,
-        recipe
-      })
+        recipe,
+      }),
     )
     .catch(error =>
       dispatch({
         type: actionTypes.LOAD_RECIPE_FAILURE,
         id,
-        error
-      })
+        error,
+      }),
     );
 
 export const actions = {
   loadRecipes,
-  loadRecipe
+  loadRecipe,
 };

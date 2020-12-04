@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import RecipeList from "../components/RecipeList";
-import RecipeDetail from "../components/RecipeDetail";
-import { toggleFavorite } from "../actions/favorites";
-import { loadRecipe } from "../actions/recipes";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import RecipeList from '../components/RecipeList';
+import RecipeDetail from '../components/RecipeDetail';
+import { toggleFavorite } from '../actions/favorites';
+import { loadRecipe } from '../actions/recipes';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentRecipe: null
+      currentRecipe: null,
     };
   }
 
@@ -52,17 +52,17 @@ Home.propTypes = {
   recipes: PropTypes.array,
   favorites: PropTypes.array,
   onToggleFavorite: PropTypes.func,
-  loadRecipe: PropTypes.func
+  loadRecipe: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   favorites: state.favorites,
-  recipes: state.recipes
+  recipes: state.recipes,
 });
 
 const mapDispatchToProps = {
   onToggleFavorite: toggleFavorite,
-  loadRecipe
+  loadRecipe,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

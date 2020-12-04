@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import RecipeList from "../components/RecipeList";
-import { showModal } from "../actions/modals";
-import { toggleFavorite } from "../actions/favorites";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import RecipeList from '../components/RecipeList';
+import { showModal } from '../actions/modals';
+import { toggleFavorite } from '../actions/favorites';
 
 const Favorites = ({ recipes, favorites, onToggleFavorite }) => (
   <main className="px4">
@@ -21,21 +21,21 @@ const Favorites = ({ recipes, favorites, onToggleFavorite }) => (
 Favorites.propTypes = {
   recipes: PropTypes.array,
   favorites: PropTypes.array,
-  onToggleFavorite: PropTypes.func
+  onToggleFavorite: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   recipes: state.recipes,
-  favorites: state.favorites
+  favorites: state.favorites,
 });
 
 const mapDispatchToProps = dispatch => ({
   onToggleFavorite: id => {
-    const message = "Are you sure you want to unfavorite ?";
+    const message = 'Are you sure you want to unfavorite ?';
     const onSubmit = () => dispatch(toggleFavorite(id));
 
-    dispatch(showModal("CONFIRM_MODAL", { message, onSubmit }));
-  }
+    dispatch(showModal('CONFIRM_MODAL', { message, onSubmit }));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
