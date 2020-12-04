@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import RecipeListItem from './RecipeListItem';
+import React from "react";
+import PropTypes from "prop-types";
+import RecipeListItem from "./RecipeListItem";
 
 const RecipeList = ({ recipes, favorites, className, style, ...props }) => (
   <div className={className} style={style}>
@@ -20,9 +20,8 @@ const RecipeList = ({ recipes, favorites, className, style, ...props }) => (
 RecipeList.propTypes = {
   recipes: PropTypes.array,
   favorites: PropTypes.array,
-  onClick: PropTypes.func,
   className: PropTypes.string,
-  style: PropTypes.object,
+  style: PropTypes.object
 };
 
 export default RecipeList;

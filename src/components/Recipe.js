@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import RecipeDetail from './RecipeDetail';
+// @ts-nocheck
+import React from "react";
+import PropTypes from "prop-types";
+import RecipeDetail from "./RecipeDetail";
 
 class Recipe extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Recipe extends React.Component {
 
     this.state = {
       recipe: null,
-      loading: false,
+      loading: false
     };
   }
 
@@ -36,7 +37,7 @@ class Recipe extends React.Component {
 }
 
 Recipe.propTypes = {
-  match: PropTypes.object,
+  match: PropTypes.object
 };
 
 export default Recipe;

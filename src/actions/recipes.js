@@ -1,57 +1,45 @@
+// @ts-nocheck
 export const actionTypes = {
-  LOAD_RECIPES_SUCCESS: 'LOAD_RECIPES_SUCCESS',
-  LOAD_RECIPES_FAILURE: 'LOAD_RECIPES_FAILURE',
-  LOAD_RECIPE_SUCCESS: 'LOAD_RECIPE_SUCCESS',
-  LOAD_RECIPE_FAILURE: 'LOAD_RECIPE_FAILURE',
-  // LOAD_RECIPES: 'LOAD_RECIPES',
-  // LOAD_RECIPE: 'LOAD_RECIPE',
+  LOAD_RECIPES_SUCCESS: "LOAD_RECIPES_SUCCESS",
+  LOAD_RECIPES_FAILURE: "LOAD_RECIPES_FAILURE",
+  LOAD_RECIPE_SUCCESS: "LOAD_RECIPE_SUCCESS",
+  LOAD_RECIPE_FAILURE: "LOAD_RECIPE_FAILURE"
 };
 
-export const loadRecipes = () => (dispatch) => (
-  // type: actionTypes.LOAD_RECIPES,
-  // remote: '/v1/recipes',
+export const loadRecipes = () => dispatch =>
   fetch(`${API_URL}/v1/recipes`)
     .then(res => res.json())
-    .then(recipes => (
+    .then(recipes =>
       dispatch({
         type: actionTypes.LOAD_RECIPES_SUCCESS,
-        recipes,
+        recipes
       })
-    ))
-    .catch(error => (
+    )
+    .catch(error =>
       dispatch({
         type: actionTypes.LOAD_RECIPES_FAILURE,
-        error,
+        error
       })
-    ))
-);
+    );
 
-export const loadRecipe = id => (dispatch) => (
+export const loadRecipe = id => dispatch =>
   fetch(`${API_URL}/v1/recipes/${id}`)
     .then(res => res.json())
-    .then(recipe => (
+    .then(recipe =>
       dispatch({
         type: actionTypes.LOAD_RECIPE_SUCCESS,
-        recipe,
+        recipe
       })
-    ))
-    .catch(error => (
+    )
+    .catch(error =>
       dispatch({
         type: actionTypes.LOAD_RECIPE_FAILURE,
         id,
-        error,
+        error
       })
-    ))
-  // type: actionTypes.LOAD_RECIPE,
-  // remote: `/v1/recipes/${id}`,
-);
-
-// export default {
-//   loadRecipes,
-//   loadRecipe,
-// };
+    );
 
 export const actions = {
   loadRecipes,
-  loadRecipe,
+  loadRecipe
 };

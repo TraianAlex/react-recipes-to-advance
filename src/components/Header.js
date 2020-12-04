@@ -1,8 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 const HeaderLink = ({ children, ...props }) => (
+  // @ts-ignore
   <NavLink
     exact
     className="p1 mx2 black rounded text-decoration-none"
@@ -24,7 +25,7 @@ const Header = () => (
 );
 
 HeaderLink.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 export default Header;

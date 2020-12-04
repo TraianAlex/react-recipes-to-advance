@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from './Button';
+import React from "react";
+import PropTypes from "prop-types";
+import Button from "./Button";
 
 const ConfirmModal = ({ message, onClose, onSubmit }) => (
   <div className="flex items-center justify-center absolute t0 l0 bg-black-muted full-width full-height">
@@ -10,6 +10,7 @@ const ConfirmModal = ({ message, onClose, onSubmit }) => (
         Cancel
       </Button>
       <Button
+        className=""
         onClick={() => {
           onSubmit();
           onClose();
@@ -24,7 +25,7 @@ const ConfirmModal = ({ message, onClose, onSubmit }) => (
 ConfirmModal.propTypes = {
   message: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired
 };
 
 export default ConfirmModal;
