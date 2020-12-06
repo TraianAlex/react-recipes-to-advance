@@ -17,10 +17,10 @@ const mergeById = (src, dst) =>
   }, []);
 
 const ACTION_HANDLERS = {
-  [actionTypes.LOAD_RECIPES_SUCCESS]: (state, actions) =>
-    mergeById(state, actions.recipes),
-  [actionTypes.LOAD_RECIPE_SUCCESS]: (state, actions) =>
-    mergeById(state, [actions.recipe]),
+  [`${actionTypes.LOAD_RECIPES}_SUCCESS`]: (state, actions) =>
+    mergeById(state, actions.data),
+  [`${actionTypes.LOAD_RECIPE}_SUCCESS`]: (state, actions) =>
+    mergeById(state, [actions.data]),
 };
 
 export default (state = initialState, action) => {

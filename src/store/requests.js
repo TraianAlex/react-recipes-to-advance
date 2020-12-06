@@ -15,7 +15,7 @@ const requests = () => next => action => {
     if (cached && cached.ttl > Date.now()) {
       next({
         type: `${type}_SUCCESS`,
-        data: cached.value.data,
+        data: cached.value,
         cached: true,
         ...others,
       });
@@ -27,9 +27,10 @@ const requests = () => next => action => {
 
   if (remote) {
     // @ts-ignore
-    return fetch(`${API_URL}${remote}`, {
+    return fetch(`${API_URL}/${remote}`, {
+      headers: { 'Access-Control-Allow-Origin': '*' },
       method: method || 'GET',
-      body: JSON.stringify(action.body),
+      body: JSON.stringify(body),
     })
       .then(res => res.json())
       .then(data => next({ type: `${type}_SUCCESS`, data, ...others }))
