@@ -21,6 +21,13 @@ class Home extends React.Component {
     });
   };
 
+  // onRowClick = id => {
+  //   // this.props.dispatch(this.props.toggleFavorite(id));
+  //   const message = 'Are you sure you want to unfavorite ?';
+  //   const onSubmit = () => this.props.dispatch(this.props.toggleFavorite(id));
+  //   this.props.dispatch(this.props.showModal('CONFIRM_MODAL', { message, onSubmit }));
+  // };
+
   render() {
     const { recipes, favorites, onToggleFavorite } = this.props;
     const { currentRecipe } = this.state;
@@ -52,7 +59,10 @@ Home.propTypes = {
   recipes: PropTypes.array,
   favorites: PropTypes.array,
   onToggleFavorite: PropTypes.func,
+  // toggleFavorite: PropTypes.func,
   loadRecipe: PropTypes.func,
+  // dispatch: PropTypes.func,
+  // showModal: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
@@ -62,7 +72,20 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   onToggleFavorite: toggleFavorite,
+  // toggleFavorite,
   loadRecipe,
+  // showModal,
 };
+
+// const mapDispatchToProps = dispatch => (
+//   {
+//     onToggleFavorite: id => {
+//       const message = 'Are you sure you want to unfavorite ?';
+//       const onSubmit = () => dispatch(toggleFavorite(id));
+//       dispatch(showModal('CONFIRM_MODAL', { message, onSubmit }));
+//     },
+//     loadRecipe: id => dispatch(loadRecipe(id)),
+//   }
+// );
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

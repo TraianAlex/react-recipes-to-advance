@@ -19,7 +19,7 @@ const RecipeListItem = ({ recipe, favorited, onClick, onFavorited }) => (
     >
       {favorited ? '✅' : '⬜️'}
     </span>
-    <span>{recipe.name}</span>
+    <span> {recipe.name}</span>
     <span>{recipe.category}</span>
   </li>
 );
